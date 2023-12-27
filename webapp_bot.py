@@ -17,7 +17,7 @@ def webAppKeyboardInline(value=15, time=1, url=""):
     else:
         webApp = types.WebAppInfo(url=f'{WEBAPP_BASEURL}?price={value}&meses={time}')
         keyboard.add(types.InlineKeyboardButton(text="Pagamento com cartão", web_app=webApp))
-        keyboard.add(types.InlineKeyboardButton('PasSeguro', callback_data='pagamento'))
+        keyboard.add(types.InlineKeyboardButton('PagSeguro', callback_data='pagamento'))
     return keyboard
 
 @bot.message_handler(commands=['start'])
